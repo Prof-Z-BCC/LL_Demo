@@ -112,11 +112,11 @@ void deleteDouble(const string& w) {
 	}
 	if (curr == nullptr)
 		cout << w << " is not present in the list." << endl;
-	else if (curr->prev != NULL)
+	else if (curr->prev != nullptr)
 		curr->prev->next = curr->next;
 
 	// Update the next node's prev pointer
-	if (curr->next != NULL)
+	if (curr->next != nullptr)
 		curr->next->prev = curr->prev;
 
 	// If the node to be deleted is the head node
@@ -125,19 +125,6 @@ void deleteDouble(const string& w) {
 
 	// Deallocate memory for the deleted node
 	delete curr;
-
-
-	/*if (curr == dbl_head) {
-	dbl_head = curr->next;
-	curr->next =
-	delete curr;
-}
-else {
-	prev->next = curr->next;
-	if (curr == sngl_tail)
-		sngl_tail = prev;
-	delete curr;
-}*/
 }
 
 // Print the SLL
